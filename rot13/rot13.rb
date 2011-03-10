@@ -5,6 +5,11 @@ lines = in_file.readlines
 in_file.close
 
 out_file = File.open("/home/jacki/apprentice_work/rot13/rot13ed.txt", "w")
+
+lines.each do |line|
+  out_file.write(line)
+end
+
 out_file.close
 
 # read each line into an array. Once EOF, write all into output file.
