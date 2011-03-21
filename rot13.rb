@@ -1,6 +1,7 @@
-# creating a method
 def make_rot13_line(a_line)
-  a_line
+  new_line = ''
+  a_line.each_char {|c| }
+  new_line
 end
 
 # open the external file in read mode.
@@ -8,7 +9,6 @@ in_file = File.open("/Users/jackikeys/Dropbox/apprentice_work/rot13/original.txt
 
 # read the lines of the external file into an array called "lines"
 lines = in_file.readlines
-# added puts to see what lines is at this point
 
 # close the file
 in_file.close
