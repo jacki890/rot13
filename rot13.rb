@@ -1,13 +1,12 @@
 def make_rot13_line(a_line)
-  variable = ''
-  a_line.each_byte do |c|
-    variable << (c + 13).chr
+  rot13_line = ''
+  a_line.downcase.each_byte do |c|
+    if c >= 97 && c <= 122
+      c = c + 13
+    end
+    rot13_line << c.chr
   end
-  variable
-end
-
-def rot13_one_char(char)
-  char
+  rot13_line
 end
 
 in_file = File.open("/Users/jackikeys/Dropbox/apprentice_work/rot13/original.txt", "r")
