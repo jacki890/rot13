@@ -1,7 +1,7 @@
 def make_rot13_line(a_line)
   variable = ''
   a_line.each_byte do |c|
-    variable << c + 13
+    variable << (c + 13).chr
   end
   variable
 end
