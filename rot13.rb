@@ -3,6 +3,9 @@ def make_rot13_line(a_line)
   a_line.downcase.each_byte do |c|
     if c >= 97 && c <= 122
       c = c + 13
+      if c >= 122
+        c = (c - 26)
+      end
     end
     rot13_line << c.chr
   end
